@@ -2,6 +2,8 @@
 #include <Geode/Geode.hpp>
 #include <Geode/modify/PauseLayer.hpp>
 #include "MyUtils.hpp"
+#include <Geode/modify/PlayLayer.hpp>
+
 
 
 using namespace geode::prelude;
@@ -29,4 +31,14 @@ class $modify(myPauseLayer, PauseLayer) {
 	MotivationPopup();
 	}
 
+	
+};
+class $modify(MyPlayLayer,PlayLayer){
+	void destroyPlayer(PlayerObject* player, GameObject* object) {
+		PlayLayer::destroyPlayer(player, object);
+if(player->m_isDead && !this->m_isPracticeMode)
+	if(m_attempts % 3 == 0) {
+		DeathNotifcation();
+	}
+	}
 };
