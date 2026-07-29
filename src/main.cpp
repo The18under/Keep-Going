@@ -36,8 +36,9 @@ class $modify(myPauseLayer, PauseLayer) {
 class $modify(MyPlayLayer,PlayLayer){
 	void destroyPlayer(PlayerObject* player, GameObject* object) {
 		PlayLayer::destroyPlayer(player, object);
+		auto x = Mod::get()->getSettingValue<int64_t>("Death-qoutes-freqency");
 if(player->m_isDead && !this->m_isPracticeMode)
-	if(m_attempts % 3 == 0) {
+	if(m_attempts % x == 0) {
 		DeathNotifcation();
 	}
 	}

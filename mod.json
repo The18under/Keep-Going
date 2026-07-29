@@ -13,5 +13,27 @@
 	"description": "",
 	"dependencies": {
 		"geode.node-ids": ">=v1.23.3"
+		
+	},
+	"settings": {
+	"Death-qoutes-freqency": {
+
+			"type": "int",
+			"name": "Death Quotes Freqency",
+			"description": "How many attempts till the next quote",
+			"default": 5,
+			"min": 1,
+			"max": 100,
+			"control": {
+				"arrows": true,
+				"arrows-step": 1,
+				"big-arrow": true,
+				"big-arrow-step": 5,
+				"slider": true,
+				"slider-step": 1,
+				"input": true
+			}
+
+		}
 	}
 }
