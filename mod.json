@@ -15,6 +15,12 @@
 		"geode.node-ids": ">=v1.23.3"
 		
 	},
+	"resources": {
+		"sprites": [
+			"res/*.png"
+		]
+	},
+	
 	"settings": {
 	"Death-qoutes-freqency": {
 
@@ -35,5 +41,7 @@
 			}
 
 		}
+
+		}
 	}
-}
+

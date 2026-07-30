@@ -3,7 +3,8 @@
 #include <Geode/modify/PauseLayer.hpp>
 #include "MyUtils.hpp"
 #include <Geode/modify/PlayLayer.hpp>
-
+#include <Geode/binding/MenuLayer.hpp>
+#include <Geode/ui/BasedButtonSprite.hpp>
 
 
 using namespace geode::prelude;
@@ -13,20 +14,24 @@ class $modify(myPauseLayer, PauseLayer) {
 	void customSetup() {
 		PauseLayer::customSetup(); 
 		
-		auto mybutton = CCMenuItemSpriteExtra::create(
-			CCSprite::createWithSpriteFrameName("GJ_editModeBtn_001.png"),
-			this, 
-			menu_selector(myPauseLayer::onMybutton)
-
+		auto chatbuttonSprite = CircleButtonSprite::create(
+			CCSprite::create("chat-bubble.png"_spr),
+			CircleBaseColor::DarkAqua,
+			CircleBaseSize::Small
 		);
-		mybutton->setID("myButton"_spr);
-		auto menu = this->getChildByID("right-button-menu");
-		menu->addChild(mybutton);
-		menu->updateLayout();
-	return;
+auto button = CCMenuItemSpriteExtra::create(
+chatbuttonSprite,
+this,
+menu_selector(myPauseLayer::onChatButtonClick)
+);
+button->setID("chat-bubble.png"_spr);
+auto menu = this->getChildByID("right-button-menu");
+menu->addChild(button);
+menu->updateLayout();
+return;
 	}
 
-	void onMybutton(CCObject* sender) {
+	void onChatButtonClick(CCObject* sender) {
 	geode::log::info("My button clicked!");
 	MotivationPopup();
 	}
@@ -41,5 +46,7 @@ if(player->m_isDead && !this->m_isPracticeMode)
 	if(m_attempts % x == 0) {
 		DeathNotifcation();
 	}
+
 	}
+
 };
