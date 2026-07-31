@@ -38,9 +38,35 @@
 				"slider": true,
 				"slider-step": 1,
 				"input": true
-			}
+			},
+			"enable-if": "Enable-quotes-death",
+			"enable-if-description": "Requires Enable Quotes on death to be toggled on."
+		},
+		"Enable-quotes-pause": {
+    "type": "bool",
+    "name": "Enable Quotes In Pause Menu",
+    "description": "Enable the quotes button in the pause menu",
+    "default": true
+},
+"Enable-quotes-editor": {
+    "type": "bool",
+    "name": "Enable Quotes In The Editor",
+    "description": "Enable the quotes button in the Editor",
+    "default": true
+},
+"Enable-quotes-main-menu": {
+    "type": "bool",
+    "name": "Enable Quotes In The Main Menu",
+    "description": "Enable the quotes button in the main menu",
+    "default": true
+},
+"Enable-quotes-death": {
+    "type": "bool",
+    "name": "Enable Quotes on death",
+    "description": "Enable the quote notifications at certain attempts deaths",
+    "default": true
+}
 
-		}
 
 		}
 	}

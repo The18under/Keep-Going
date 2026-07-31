@@ -1,2 +1,0 @@
--add a button to the main menu
--add working settings

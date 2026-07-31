@@ -3,6 +3,7 @@
 #include "MyUtils.hpp"
 #include <Geode/modify/PlayLayer.hpp>
 #include <Geode/modify/EditorUI.hpp>
+#include <Geode/modify/MenuLayer.hpp>
 
 
 using namespace geode::prelude;
@@ -28,9 +29,12 @@ button->setLayoutOptions(
 );
 button->setID("chat-bubble.png"_spr);
 auto menu = this->getChildByID("right-button-menu");
-menu->addChild(button);
-menu->updateLayout();
-return;
+auto value = Mod::get()->getSettingValue<bool>("Enable-quotes-pause");
+	if(value) {
+		menu->addChild(button);
+		menu->updateLayout();
+		 }
+		 return;
 	}
 
 	void onChatButtonClick(CCObject* sender) {
@@ -46,10 +50,13 @@ class $modify(MyPlayLayer,PlayLayer){
 		
 		auto x = Mod::get()->getSettingValue<int64_t>("Death-qoutes-freqency");
 
+		auto death = Mod::get()->getSettingValue<bool>("Enable-quotes-death");
+	if(death) {
 		if(player->m_isDead && !this->m_isPracticeMode && m_attempts % x == 0 ) {
-		DeathNotifcation();
-}
-
+		DeathNotifcation(); }
+		 }
+	 
+		 
 	}
 
 };
@@ -92,13 +99,16 @@ class $modify(MyEditorUI, EditorUI) {
 		options->setNextGap(2.2f);
 		myButton->setLayoutOptions(options);
 
+		auto editbutton = Mod::get()->getSettingValue<bool>("Enable-quotes-editor");
+	if(editbutton) {
 		menu->addChild(myButton);
 		menu->updateLayout();
-		if(auto btnSprite = myButton->getNormalImage()) {
+	if(auto btnSprite = myButton->getNormalImage()) {
 			btnSprite->setPositionX(btnSprite->getPositionX() - 4.0f); 
-		}
+		} 
 	}
-
+	
+}
 	return true;
 	}
 
@@ -106,4 +116,46 @@ class $modify(MyEditorUI, EditorUI) {
 		geode::log::info("My editor button clicked!");
 		MotivationPopup();
 	}
+};
+
+class $modify(MyMenuLayer, MenuLayer) {
+	
+ bool init() {
+        if (!MenuLayer::init())
+            return false;
+
+		
+		auto chatbuttonSprite = CircleButtonSprite::create(
+			CCSprite::create("chat-bubble.png"_spr),
+			CircleBaseColor::DarkAqua,
+			CircleBaseSize::MediumAlt
+		);
+
+auto button2 = CCMenuItemSpriteExtra::create(
+	chatbuttonSprite,
+	this,
+	menu_selector(MyMenuLayer::onChatButtonClick)
+);
+		button2->setLayoutOptions(
+		AxisLayoutOptions::create()
+			->setRelativeScale(0.9f)
+);
+
+button2->setID("chat-bubble.png"_spr);
+auto menu = this->getChildByID("right-side-menu");
+
+	auto menubutton = Mod::get()->getSettingValue<bool>("Enable-quotes-main-menu");
+	if(menubutton) {
+		menu->addChild(button2);
+		menu->updateLayout();
+}
+
+return true;
+
+ }
+	void onChatButtonClick(CCObject* sender) {
+	geode::log::info("My button clicked!");
+	MotivationPopup();
+	}
+
 };
