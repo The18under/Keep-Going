@@ -65,7 +65,7 @@ class $modify(MyEditorUI, EditorUI) {
 
 		auto btnSprite = EditorButtonSprite::create(
 			myUItexture,
-			EditorBaseColor::Gray,
+			EditorBaseColor::DarkGray,
 			EditorBaseSize::Normal
 		
 		);
@@ -87,6 +87,10 @@ class $modify(MyEditorUI, EditorUI) {
 		if(auto btnSprite = myButton->getNormalImage()) {
 			btnSprite->setPosition({ 20.0f, 20.0f});
 		}
+
+		auto options = AxisLayoutOptions::create();
+		options->setNextGap(2.2f);
+		myButton->setLayoutOptions(options);
 
 		menu->addChild(myButton);
 		menu->updateLayout();
