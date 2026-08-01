@@ -1,3 +1,6 @@
+#1.0.3
+- added a desc for people viewing it on the geode index website
+
 #1.0.2
 - fixed the mod version in the mod.json 
 
