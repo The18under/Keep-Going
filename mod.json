@@ -8,9 +8,9 @@
 	},
 	"id": "junotrion.keep-going",
 	"name": "Miscellaneous Quotes",
-	"version": "v1.0.2",
+	"version": "v1.0.3",
 	"developer": "junotrion",
-	"description": "",
+	"description": "These quotes do something to you..........",
 	"dependencies": {
 		"geode.node-ids": ">=v1.23.3"
 		
