@@ -1,3 +1,6 @@
+#1.0.2
+- fixed the mod version in the mod.json 
+
 # 1.0.1
 - Censored one quote
 - Added back Mac and Ios builds (if it crashes, blame Ery)
