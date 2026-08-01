@@ -23,10 +23,12 @@ auto button = CCMenuItemSpriteExtra::create(
 	this,
 	menu_selector(myPauseLayer::onChatButtonClick)
 );
+
 button->setLayoutOptions(
 	AxisLayoutOptions::create()
 	->setRelativeScale(0.6f)
 );
+
 button->setID("chat-bubble.png"_spr);
 auto menu = this->getChildByID("right-button-menu");
 auto value = Mod::get()->getSettingValue<bool>("Enable-quotes-pause");
@@ -51,7 +53,8 @@ class $modify(MyPlayLayer,PlayLayer){
 		auto x = Mod::get()->getSettingValue<int64_t>("Death-qoutes-freqency");
 
 		auto death = Mod::get()->getSettingValue<bool>("Enable-quotes-death");
-	if(death) {
+	
+		if(death) {
 		if(player->m_isDead && !this->m_isPracticeMode && m_attempts % x == 0 ) {
 		DeathNotifcation(); }
 		 }
@@ -100,6 +103,7 @@ class $modify(MyEditorUI, EditorUI) {
 		myButton->setLayoutOptions(options);
 
 		auto editbutton = Mod::get()->getSettingValue<bool>("Enable-quotes-editor");
+	
 	if(editbutton) {
 		menu->addChild(myButton);
 		menu->updateLayout();
@@ -145,6 +149,7 @@ button2->setID("chat-bubble.png"_spr);
 auto menu = this->getChildByID("right-side-menu");
 
 	auto menubutton = Mod::get()->getSettingValue<bool>("Enable-quotes-main-menu");
+	
 	if(menubutton) {
 		menu->addChild(button2);
 		menu->updateLayout();

@@ -2,12 +2,10 @@
 	"geode": "5.8.2",
 	"gd": {
 		"win": "2.2081",
-		"android": "2.2081",
-		"mac": "2.2081",
-		"ios": "2.2081"
+		"android": "2.2081"
 	},
 	"id": "junotrion.keep-going",
-	"name": "Keep Going",
+	"name": "Miscellaneous Quotes",
 	"version": "v1.0.0",
 	"developer": "junotrion",
 	"description": "",
@@ -20,7 +18,7 @@
 			"res/*.png"
 		]
 	},
-	
+	"tags": ["offline", "content", "universal", "joke"],
 	"settings": {
 	"Death-qoutes-freqency": {
 
@@ -42,7 +40,21 @@
 			"enable-if": "Enable-quotes-death",
 			"enable-if-description": "Requires Enable Quotes on death to be toggled on."
 		},
-		"Enable-quotes-pause": {
+		"Enable-death-SFX": {
+    "type": "bool",
+    "name": "Enable Quotes SFX on death",
+    "description": "Enable the quotes SFX when you die",
+    "default": true,
+	"enable-if": "Enable-quotes-death",
+	"enable-if-description": "Requires Enable Quotes on death to be toggled on."
+},
+		"Enable-quotes-death": {
+    "type": "bool",
+    "name": "Enable Quotes on death",
+    "description": "Enable the quote notifications at certain attempts deaths",
+    "default": true
+},
+"Enable-quotes-pause": {
     "type": "bool",
     "name": "Enable Quotes In Pause Menu",
     "description": "Enable the quotes button in the pause menu",
@@ -59,15 +71,7 @@
     "name": "Enable Quotes In The Main Menu",
     "description": "Enable the quotes button in the main menu",
     "default": true
-},
-"Enable-quotes-death": {
-    "type": "bool",
-    "name": "Enable Quotes on death",
-    "description": "Enable the quote notifications at certain attempts deaths",
-    "default": true
-}
-
-
+			}
 		}
 	}
 
