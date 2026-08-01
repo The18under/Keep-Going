@@ -20,6 +20,10 @@ This is also my first mod so uhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh *yeah*
 Have fun with this mod and stay motivated!!
 ## **Special Thanks**
 
-**The Geode SDK discord sever** for answering my stupid questions
+- **The Geode SDK discord sever** for answering my stupid questions
 
-**RobTop** for making this **AMAZING** game we spend some much of our time playing,building, and watching videos on.
+- **RobTop** for making this **AMAZING** game we spend some much of our time playing,building, and watching videos on.
+
+- **ArcticWoof**
+
+- **Firee**

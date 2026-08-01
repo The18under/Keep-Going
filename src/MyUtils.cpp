@@ -51,10 +51,10 @@ void MotivationPopup() {
  "Is this possible with accurate hitboxes.\n- GeoGD",
  "The mooga is ours.\n-KingSammelot",
  "The KRUSTY KRAB PIZZA, is the pizza, for you and me.\n- SpongeBob",
- "Belif creates the actual fact.-William James",
+ "Belif creates the actual fact.\n-William James",
  "The journey of a thousand miles begins with a single step.\n-Lao Tzu",
  "The greastest pleasure of life is love.\n-Euripides",
- "I hope the kid Fucking dies.\n-Denni",
+ "I hope the kid ####### dies.\n-Denni",
  "Fire in the Hole.\n-Normal",
  "That spider part.....\n GD colon"
     };
