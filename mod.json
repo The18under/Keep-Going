@@ -8,7 +8,7 @@
 	},
 	"id": "junotrion.keep-going",
 	"name": "Miscellaneous Quotes",
-	"version": "v1.0.3",
+	"version": "v1.0.4",
 	"developer": "junotrion",
 	"description": "These quotes do something to you..........",
 	"dependencies": {
