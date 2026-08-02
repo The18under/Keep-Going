@@ -1,3 +1,8 @@
+# 1.1.0
+- added 32 more quotes
+- added Death Quotes Display Time setting
+- fixed settings
+
 # 1.0.4
 - fixed the changelog ugh
 
@@ -9,7 +14,7 @@
 
 # 1.0.1
 - Censored one quote
-- Added back Mac and Ios builds (if it crashes, blame Ery)
+- Added back Mac and ios builds (if it crashes, blame Ery)
 - Added more people to special thanks
 
 # 1.0.0

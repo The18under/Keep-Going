@@ -8,7 +8,7 @@
 	},
 	"id": "junotrion.keep-going",
 	"name": "Miscellaneous Quotes",
-	"version": "v1.0.4",
+	"version": "v1.1.0",
 	"developer": "junotrion",
 	"description": "These quotes do something to you..........",
 	"dependencies": {
@@ -20,7 +20,10 @@
 			"res/*.png"
 		]
 	},
-	"tags": ["offline", "content", "universal", "joke"],
+	"tags": ["offline", "content", "universal", "joke","customization","content"],
+	"links": {
+		"source": "https://github.com/The18under/Keep-Going"
+	},
 	"settings": {
 	"Death-qoutes-freqency": {
 
@@ -32,11 +35,32 @@
 			"max": 100,
 			"control": {
 				"arrows": true,
-				"arrows-step": 1,
-				"big-arrow": true,
+				"arrow-step": 1,
+				"big-arrows": true,
 				"big-arrow-step": 5,
 				"slider": true,
 				"slider-step": 1,
+				"input": true
+			},
+			"enable-if": "Enable-quotes-death",
+			"enable-if-description": "Requires Enable Quotes on death to be toggled on."
+		},
+		
+		"Death-qoutes-showtime": {
+		
+			"type": "float",
+			"name": "Death Quotes Display Time",
+			"description": "How long the quote will be displayed  for in seconds",
+			"default": 2.0,
+			"min": 0.1,
+			"max": 10.0,
+			"control": {
+				"arrows": true,
+				"arrow-step": 0.1,
+				"big-arrows": false,
+				"big-arrow-step": 0.5,
+				"slider": true,
+				"slider-step": 0.1,
 				"input": true
 			},
 			"enable-if": "Enable-quotes-death",
