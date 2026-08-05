@@ -107,6 +107,9 @@ class $modify(MyEditorUI, EditorUI) {
 	if(editbutton) {
 		menu->addChild(myButton);
 		menu->updateLayout();
+		if(this->m_uiItems) {
+		this->m_uiItems->addObject(myButton);
+		}
 	if(auto btnSprite = myButton->getNormalImage()) {
 			btnSprite->setPositionX(btnSprite->getPositionX() - 4.0f); 
 		} 

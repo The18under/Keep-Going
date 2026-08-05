@@ -1,3 +1,6 @@
+# 1.1.1
+- fixed the editor button still being visible in playtest (thanks Ery for pointing this out)
+
 # 1.1.0
 - added 32 more quotes
 - added Death Quotes Display Time setting
